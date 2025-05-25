@@ -1,0 +1,462 @@
+/* Google Play Music Unoffical Player 
+   Main Style
+*/
+
+body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    background-color: #f5f5f5;
+    user-select: none;
+}
+body::-webkit-scrollbar {
+    width: 0;
+}
+
+li {
+    list-style: none;
+}
+
+/* Tabs */
+
+.navi-tabs {
+    width: 120px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 70px;
+}
+
+.tab-item {
+    text-transform: uppercase;
+    color: #ffffffbe;
+    cursor: pointer;
+    height: 37px;
+}
+.tab-item:hover {
+    text-transform: uppercase;
+    color: #ffffff;
+    cursor: pointer;
+    height: 37px;
+}
+.active {
+    text-transform: uppercase;
+    color: #ffffff;
+    border-bottom: 4px solid white;
+}
+
+/* Logos and icons */
+
+.logo {
+    font-size: 17px;
+    margin-top: -5px;
+}
+
+/* Navi buttons an links */
+
+.sidenav-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -3px;
+}
+
+/* nav panel and their componnents */
+.navi {
+    width: 100%;
+    height: 110px;
+    background-color: #ef6c00;
+    position: fixed;
+    z-index: 3000;
+}
+
+/* navi header */
+.navi .head {
+    width: 100%;
+    height: 48%;
+    padding-top: 10px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* navi bottom */
+.navi .bottom {
+    width: 100%;
+    height: 48%;
+    padding-top: 15px;
+    background-color: transparent;
+}
+.navi .head .controls {
+    width: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 18px;
+}
+
+/* Search Item */
+.search-panel {
+    width: 500px;
+    height: 40px;
+    background-color: #ffffff24;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.search-panel input{
+    width: 400px;
+    height: 20px;
+    border: none;
+    color: white;
+}
+
+.album-list {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(171px, 1fr));
+    gap: 10px;
+    box-sizing: border-box;
+    min-height: calc(100vh - 180px);
+    
+}
+.track-list {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: none;
+}
+
+/* Album Item */
+
+.album-item {
+    width: 178px;
+    height: 230px;
+    background-color: white;
+    display: inline-block;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.album-item img {
+    width: 178px;
+    height: 178px;
+    border-top-right-radius: 2px;
+    border-top-left-radius: 2px;
+}
+.album-item h1 {
+    font-size: 16px;
+    margin-left: 10px;
+    margin-top: 4px;
+}
+.album-item p {
+    font-size: 10px;
+    margin-left: 10px;
+    margin-top: -22px;
+    color: #bdbdbd;
+}
+.album-text {
+    width: 178px; /* Adjust this width as needed */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* This adds "..." to indicate overflow */
+}
+
+/* search */
+
+.search-results {
+    width: 85%;
+    height: 400px;
+    overflow-y: auto;
+    position: absolute;
+    top: 20%;
+    background-color: #fafafa;
+    padding: 20px;
+    z-index: 6000;
+    left: 0; 
+    right: 0; 
+    margin-inline: auto; 
+    display: none;
+}
+
+/* Track Item */
+
+.track-cover {
+    width: 50px;
+    height: 50px;
+}
+
+/* Album Songs List */
+#openedAlbum {
+    width: 100%;
+    height: calc(100% - 70px);
+    position: absolute;
+    overflow-y: scroll;
+    display: none;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-color: #f5f5f5;
+}
+#openedAlbum::-webkit-scrollbar {
+    width: 0;
+}
+.card {
+    width: 80%;
+    height: 100%;
+    bottom: 0;
+    padding: 20px;
+    margin: 0 auto;
+    margin-top: 200px;
+    z-index: 4000;
+    overflow-y: scroll;
+    background-color: black;
+}
+.card .album-tracks {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.information-box {
+    width: 787px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: -20px;
+    margin-left: -20px;
+    display: flex;
+}
+.information-box img {
+    width: 250px;
+    height: 250px;
+}
+
+#AlbumName {
+    font-size: 38px;
+    margin-top: 10px;
+    text-align: left;
+}
+#AlbumArtist {
+    font-size: 15px;
+    margin-top: -12px;
+    color: #bdbdbd;
+    text-align: left;
+}
+
+.card-play {
+    margin-top: 168px;
+    position: absolute;
+    z-index: 5000;
+    right: 14%;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    line-height: 40px;
+    padding: 0;
+    cursor: pointer;
+    background-color: #ef6c00;
+}
+#play {
+    border: none;
+    z-index: 5000;
+    right: 14%;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    line-height: 40px;
+    padding: 0;
+    cursor: pointer;
+    background-color: #ef6c00;
+}
+
+.names {
+    width: 100%;
+    text-transform: uppercase;
+    padding-left: 15px;
+    display: flex;
+    margin-top: 40px;
+}
+
+.names p {
+    margin-top: 0px;
+    margin-left: 2px;
+}
+
+.track {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    padding-right: 15px;
+    cursor: pointer;
+}
+.track:hover {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    background-color: #f5f5f5;
+    padding-right: 15px;
+    cursor: pointer;
+}
+.text-box {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.track h1 {
+    width: 59.7%;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: 21px;
+}
+
+/* Music Player and their components */
+
+.music-player {
+    width: 100%;
+    height: 70px;
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    z-index: 4000;
+    display: flex;
+    justify-content: space-between;
+}
+.audio-controls {
+    width: 300px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 11px;
+}
+.audio-controls button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.all-controls {
+    width: 100px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 11px;
+    margin-right: 20px;
+}
+.all-controls button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+} 
+#miniplayer {
+    position: absolute;
+    right: 1px;
+    bottom: 1px;
+    background: transparent;
+    border: none;
+    color: #e0e0e0;
+    height: 21px;
+    width: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#miniplayer i {
+    font-size: 20px;
+}
+
+.progress-container {
+    width: calc(100% - 70px);
+    height: 4px;
+    position: absolute;
+    right: 0;
+    z-index: 5000;
+}
+.progress-container div {
+    width: 0;
+    height: 4px;
+    background-color: #ef6c00;
+}
+
+#progressContainer:hover #progressDot {
+  display: block;
+}
+
+.song-info {
+    width: 260px;
+    height: 70px;
+    position: absolute;
+    left: 83px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* This adds "..." to indicate overflow */
+}
+.song-info h1 {
+    font-size: 15px;
+    margin-top: 20px;
+}
+.song-info p {
+    font-size: 10px;
+    margin-top: -21px;
+    color: #adadad;
+}
+.miniplaylist {
+    position: fixed;
+    width: 60%;
+    height: 476px;
+    right: 8px;
+    bottom: 78px;
+    z-index: 50000;
+    display: none;
+}
+.miniplaylist .all-tracks {
+    overflow-y: scroll; 
+    height: 314px;
+}
+.miniplaylist .all-tracks::-webkit-scrollbar {
+    width: 0;
+}
+.miniplaylist #MiniCover {
+    background-image: linear-gradient(90deg, rgba(0,0,0,0.88) 0%, rgba(255,255,255,0) 100%), url('../img/noalbum.png');
+    width: 100%; 
+    height: 120px; 
+    margin-top: -41px; 
+    background-position: center; 
+    background-size: cover;
+}
+
+.mini-names {
+    width: 100%;
+    height: 70px;
+    color: white;
+}
+.mini-names h1 {
+    font-size: 28px;
+    padding-top: 28px;
+}
+.mini-names p {
+    padding-left: 54px;
+    margin-top: -19px;
+    color: #adadad;
+}
