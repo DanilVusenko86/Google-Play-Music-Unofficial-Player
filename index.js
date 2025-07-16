@@ -138,8 +138,10 @@ function createWindow() {
     const mainWindow = new BrowserWindow({
         minWidth: 1098,
         minHeight: 628,
-        width: 1190,
-        height: 720,
+        width: 1157,
+        height: 686,
+        transparent: true,
+        frame: false,
         icon: path.join(__dirname, 'img', 'icon.ico'),
         autoHideMenuBar: true,
         webPreferences: {
@@ -150,6 +152,7 @@ function createWindow() {
     });
 
     mainWindow.loadFile('index.html');
+    
 
     ipcMain.on("save-color", (event, color) => {
         const filePath = path.join(__dirname, "json", "theme.json");
@@ -175,6 +178,22 @@ function createWindow() {
             return null;
         }
     });
+
+    ipcMain.on("minimize", () => {
+        mainWindow.minimize()
+    });
+
+    ipcMain.on("maximize", () => {
+        mainWindow.maximize()
+    });
+
+    ipcMain.on("unmaximize", () => {
+        mainWindow.unmaximize()
+    });
+
+    ipcMain.handle("ismaximized", () => {
+        return mainWindow.isMaximized()
+    });
 }
 
 app.whenReady().then(() => {
@@ -188,3 +207,4 @@ app.whenReady().then(() => {
 app.on('window-all-closed', () => {
     if (process.platform !== 'darwin') app.quit();
 });
+

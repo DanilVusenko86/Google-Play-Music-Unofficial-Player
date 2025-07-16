@@ -21,20 +21,24 @@ document.getElementById('search').addEventListener('click', (event) => {
 
 document.body.addEventListener('click', () => {
   const resultsContainer = document.getElementById('search-results');
+  const overlayContainer = document.querySelector(".search-overlay")
   if (resultsContainer) {
     resultsContainer.style.display = 'none';
+    overlayContainer.style.display = 'none';
   }
 });
 
 document.getElementById('search').addEventListener('input', (event) => {
   const query = event.target.value.toLowerCase().trim();
   const resultsContainer = document.getElementById('search-results');
+  const overlayContainer = document.querySelector(".search-overlay")
   if (!resultsContainer) {
     console.error('Search results container not found');
     return;
   }
 
   resultsContainer.style.display = query ? 'block' : 'none';
+  overlayContainer.style.display = query ? 'block' : 'none';
   resultsContainer.innerHTML = ''; 
 
   if (!query || albums.length === 0) {

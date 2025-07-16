@@ -432,7 +432,7 @@ document.getElementById('miniplayer').addEventListener('click', () => {
   }
 
   const track = currentAlbum.tracks[currentTrackIndex];
-  miniPlayerWindow = window.open('', `${track.title}`, 'width=300,height=300,resizable=no,autoHideMenuBar=true');
+  miniPlayerWindow = window.open('', `${track.title}`, 'frame=false,width=300,height=300,resizable=no,autoHideMenuBar=true');
   if (!miniPlayerWindow) {
     console.error('Failed to open mini-player window');
     return;
@@ -448,25 +448,46 @@ document.getElementById('miniplayer').addEventListener('click', () => {
             background-size: cover;
             user-select: none;
             margin: 0;
+            -webkit-app-region: drag;
           }
-          .names {
+          .top {
+            display: flex;
+            aligin-items: center;
+            justify-content: sapce-between;
             width: 100%;
             height: 50px;
-            background: linear-gradient(180deg, rgba(0,0,0,0.8940826330532213) 0%, rgba(13,13,13,0.8744747899159664) 19%, rgba(28,28,28,0.8632703081232493) 28%, rgba(255,255,255,0) 91%);
+            background: linear-gradient(180deg, rgba(0,0,0,0.8800770308123249) 0%, rgba(255,255,255,0) 100%);
             position: absolute;
             top: 0;
             left: 0;
             padding: 10px;
           }
+          .close {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+          }
+          .close > i {
+            color: white;
+          }
           .names .name {
             font-size: 25px;
             color: white;
             margin-top: -4px;
+            width: 244px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
           }
           .names .artist {
             font-size: 15px;
             color: white;
             margin-top: -30px;
+            width: 244px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
           }
           .player {
             background-color: rgba(255, 255, 255, 0.92);
@@ -505,6 +526,7 @@ document.getElementById('miniplayer').addEventListener('click', () => {
           button {
             border: none;
             background: none;
+            -webkit-app-region: no-drag;
           }
           .progress-container {
             width: 100%;
@@ -524,9 +546,14 @@ document.getElementById('miniplayer').addEventListener('click', () => {
         <link rel="stylesheet" href="css/materialize.css">
       </head>
       <body>
-        <div class="names">
-          <p class="name">${track.title}</p>
-          <p class="artist">${track.artist}</p>
+        <div class="top">
+          <div class="names">
+            <p class="name">${track.title}</p>
+            <p class="artist">${track.artist}</p>
+          </div>
+          <button onclick="window.close()" class="close .waves-effect .waves-dark">
+            <i class="material-icons">close</i>
+          </button>
         </div>
         <div class="player">
           <div class="progress-container">

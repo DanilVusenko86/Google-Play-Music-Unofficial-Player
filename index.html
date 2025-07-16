@@ -28,7 +28,19 @@
                 <input type="search" class="search-bar" id="search" placeholder="Search music">
             </div>
 
-            <div style="width: 130px;"></div>
+            <div class="btn-container">
+                <button class="minimize waves-black waves-effect">
+                    <i class="material-icons">minimize</i>
+                </button>
+
+                <button class="maximize waves-black waves-effect">
+                    <i class="material-icons">fullscreen</i>
+                </button>
+
+                <button onclick="window.close()" class="close waves-black waves-effect">
+                    <i class="material-icons">close</i>
+                </button>
+            </div>
 
         </div>
 
@@ -113,7 +125,7 @@
 
         </div>
         <div class="modal-footer">
-            <p class="grey-text text-lighten-2" style="float: left;">Version 3.0-p1</p>
+            <p class="grey-text text-lighten-2" style="float: left;">Version 3.0-p2</p>
         </div>
     </div>
 
@@ -130,11 +142,13 @@
         </div>
     </div><br><br>
 
-    <div id="search-results" class="search-results z-depth-1"></div>
+    <div class="search-overlay">
+        <div id="search-results" class="search-results z-depth-1"></div>
+    </div>
 
     <div id="openedAlbum">
 
-        <a class="card-play z-depth-1" id="playFirst"><i class="material-icons" style="font-size: 45px;">play_arrow</i></a>
+        <a class="card-play z-depth-1" id="playFirst" ><i class="material-icons" style="font-size: 45px;">play_arrow</i></a>
         
         <div class="card white" >
             <div class="information-box">
@@ -183,35 +197,34 @@
         </div>
 
         <div class="audio-controls">
-            <button id="repeat" style="padding-right: 10px;">
+            <button id="repeat" class="waves-effect waves-black">
                 <i class="material-icons" id="repeatIcon">repeat</i>
-             </button>
+            </button>
              
-             <button id="prevbtn">
+            <button id="prevbtn" class="waves-effect waves-black">
                 <i class="material-icons">skip_previous</i>
-             </button>
+            </button>
 
-            <button id="play">
+            <button id="play" class="waves-effect waves-black">
                 <i class="material-icons" id="playICon">play_arrow</i>
             </button>
 
-            <button id="nextbtn">
+            <button id="nextbtn" class="waves-effect waves-black">
                 <i class="material-icons">skip_next</i>
             </button>
 
-            <button id="shuffle">
+            <button id="shuffle" class="waves-effect waves-black">
                 <i id="shuffleIcon" class="material-icons">shuffle</i>
             </button>
               
-            
         </div>
 
         <div class="all-controls">
-            <button id="mutebtn">
+            <button id="mutebtn" class="waves-effect waves-black">
                 <i class="material-icons" id="muteIcon">volume_up</i>
             </button>
 
-            <button id="playlistbtn">
+            <button id="playlistbtn" class="waves-effect waves-black">
                 <i class="material-icons">queue_music</i>
             </button>
         </div>
@@ -231,5 +244,6 @@
     <script src="js/sidenav.js"></script>
     <script src="js/folderSelect.js"></script>
     <script src="js/colorWrite.js"></script>
+    <script src="js/nav.js"></script>
 </body>
 </html>

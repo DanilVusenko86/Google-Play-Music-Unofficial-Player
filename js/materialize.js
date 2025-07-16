@@ -3180,8 +3180,8 @@ $jscomp.polyfill = function (e, r, p, m) {
         this._nthModalOpened = Modal._modalsOpen;
 
         // Set Z-Index based on number of currently open modals
-        this.$overlay[0].style.zIndex = 50000 + Modal._modalsOpen * 2;
-        this.el.style.zIndex = 50000 + Modal._modalsOpen * 2 + 1;
+        this.$overlay[0].style.zIndex = 1000 + Modal._modalsOpen * 2;
+        this.el.style.zIndex = 1000 + Modal._modalsOpen * 2 + 1;
 
         // Set opening trigger, undefined indicates modal was opened by javascript
         this._openingTrigger = !!$trigger ? $trigger[0] : undefined;

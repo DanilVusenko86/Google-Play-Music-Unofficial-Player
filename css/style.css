@@ -13,6 +13,16 @@ body::-webkit-scrollbar {
     width: 0;
 }
 
+button {
+    -webkit-app-region: no-drag;
+}
+
+a,button:focus { outline: none; }
+
+a, .track, .album-item, li, input {
+    -webkit-app-region: no-drag;
+}
+
 li {
     list-style: none;
 }
@@ -68,7 +78,8 @@ li {
     height: 110px;
     background-color: #ef6c00;
     position: fixed;
-    z-index: 3000;
+    z-index: 200;
+    -webkit-app-region: drag;
 }
 
 /* navi header */
@@ -108,9 +119,12 @@ li {
     justify-content: space-around;
 }
 .search-panel input{
-    width: 400px;
+    /* width: 400px;
     height: 20px;
-    border: none;
+    border: none; */
+    color: white;
+}
+.search-panel input::placeholder {
     color: white;
 }
 
@@ -160,26 +174,39 @@ li {
     color: #bdbdbd;
 }
 .album-text {
-    width: 178px; /* Adjust this width as needed */
+    width: 178px;
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis; /* This adds "..." to indicate overflow */
+    text-overflow: ellipsis; 
 }
 
 /* search */
 
 .search-results {
-    width: 85%;
+    width: 86.1%;
     height: 400px;
     overflow-y: auto;
     position: absolute;
     top: 20%;
     background-color: #fafafa;
     padding: 20px;
-    z-index: 6000;
+    z-index: 6001;
     left: 0; 
     right: 0; 
     margin-inline: auto; 
+    display: none;
+}
+
+.search-overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.399);
+    z-index: 6000;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
     display: none;
 }
 
@@ -207,14 +234,15 @@ li {
 }
 .card {
     width: 80%;
-    height: 100%;
-    bottom: 0;
+    height: fit-content;
+    transform: translate(-12%, 0);
+    margin-left: 20%;
     padding: 20px;
-    margin: 0 auto;
-    margin-top: 200px;
-    z-index: 4000;
-    overflow-y: scroll;
-    background-color: black;
+    margin-top: 250px;
+    z-index: 100;
+    border-radius: 2px;
+    /* overflow-y: scroll; */
+    /* background-color: black; */
 }
 .card .album-tracks {
     width: 100%;
@@ -234,6 +262,7 @@ li {
 .information-box img {
     width: 250px;
     height: 250px;
+    border-top-left-radius: 2px;
 }
 
 #AlbumName {
@@ -249,7 +278,7 @@ li {
 }
 
 .card-play {
-    margin-top: 168px;
+    margin-top: 218px;
     position: absolute;
     z-index: 5000;
     right: 14%;
@@ -269,7 +298,6 @@ li {
 #play {
     border: none;
     z-index: 5000;
-    right: 14%;
     width: 45px;
     height: 45px;
     border-radius: 50%;
@@ -338,7 +366,7 @@ li {
     background-color: white;
     position: fixed;
     bottom: 0;
-    z-index: 4000;
+    z-index: 200;
     display: flex;
     justify-content: space-between;
 }
@@ -354,6 +382,12 @@ li {
     background-color: transparent;
     border: none;
     cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
 }
 .all-controls {
     width: 100px;
@@ -368,6 +402,12 @@ li {
     border: none;
     background-color: transparent;
     cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 } 
 #miniplayer {
     position: absolute;
@@ -410,7 +450,7 @@ li {
     left: 83px;
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis; /* This adds "..." to indicate overflow */
+    text-overflow: ellipsis;
 }
 .song-info h1 {
     font-size: 15px;
@@ -429,6 +469,7 @@ li {
     bottom: 78px;
     z-index: 50000;
     display: none;
+    border-radius: 2px;
 }
 .miniplaylist .all-tracks {
     overflow-y: scroll; 
@@ -459,4 +500,27 @@ li {
     padding-left: 54px;
     margin-top: -19px;
     color: #adadad;
+}
+
+/* Nav Buttons */
+
+.btn-container {
+    width: 130px;
+    display: flex;
+    align-items: center;
+}
+
+.btn-container button {
+    width: 43.3px;
+    height: 43.3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: none;
+    background-color: transparent;
+}
+
+.btn-container button > i {
+    color: white;
 }
