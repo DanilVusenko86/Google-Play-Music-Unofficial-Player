@@ -6,6 +6,7 @@ No affiliation with Google. Google Play is a trademark of Google Inc.
 <h1>Components</h1>
 <p>JS Media Tags: https://github.com/aadsm/jsmediatags</p>
 <p>Music Meta-Data: https://github.com/Borewit/music-metadata</p>
+<p>Electron: https://www.electronjs.org</p>
 
 <h1>History</h1>
 <p>In 2011, Google launched a new streaming service called Google Play Music, <br> but in 2020, the service was shut down.</p>
