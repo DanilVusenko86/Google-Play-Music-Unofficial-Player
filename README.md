@@ -1,25 +1,58 @@
-<img src="img/logo.png" width="450px"><br>
-<h2>Google Play Music Unofficial Player</h2>
-<p>GPMUP - its a local music player with GPM Functional and design</p>
-No affiliation with Google. Google Play is a trademark of Google Inc.
+![GPMUP](img/logo.png)
 
-<h1>Components</h1>
-<p>JS Media Tags: https://github.com/aadsm/jsmediatags</p>
-<p>Music Meta-Data: https://github.com/Borewit/music-metadata</p>
-<p>Electron: https://www.electronjs.org</p>
+#
 
-<h1>History</h1>
-<p>In 2011, Google launched a new streaming service called Google Play Music, <br> but in 2020, the service was shut down.</p>
+GPMUP - its a local music player with GPM Functional and design
 
-<h1>Links and Communities</h1>
-<p>Google Play Music on Reddit: https://www.reddit.com/r/googleplaymusic/s/t23ruriLJW</p>
-<p>Google Play Music on Wiki: https://wikipedia.org/wiki/Google_Play_Music</p>
-<p>Old Google Play Music Link: https://play.google.com/music/managemusic</p>
-<p>GPMDP Link: https://github.com/MarshallOfSound/Google-Play-Music-Desktop-Player-UNOFFICIAL-</p>
+> [!WARNING]
+> No affiliation with Google. Google Play is a trademark of Google Inc. 
 
-<h1>How to Backup/Transfer Music from Google Play Music Mobile app ?</h1>
+# Modules
 
-<p>Instruction: https://www.reddit.com/r/googleplaymusic/comments/1en4lsn/how_to_upload_gpm_music_to_gpmup_from_mobile_app/</p>
+- [Music Metadata](https://www.npmjs.com/package/music-metadata)
+- [Materialize CSS](https://materializecss.com/)
+- [ElectronJS](https://github.com/electron/electron)
+- [ElectronForge](https://github.com/electron/forge)
 
-<h1>Developers</h1>
-<p>Danil Vusenko</p>
+# Links and Communities
+
+- [Google Play Music on Reddit](https://www.reddit.com/r/googleplaymusic/s/t23ruriLJW)
+- [Google Play Music on Wiki](https://wikipedia.org/wiki/Google_Play_Music)
+
+# Gallery
+
+| Albums List | Songs List|
+|:-----------------:|:-----------:|
+| ![Albums](img/1.png) | ![Songs](img/5.png) |
+
+| Playlist Card | Opened Album |
+|:-----------------:|:-----------:|
+| ![Playlist](img/4.png) | ![OpenedAlbum](img/3.png) |
+
+| Search Page | Settings |
+|:-----------------:|:-----------:|
+| ![Search](img/9.png) | ![Settings](img/2.png) |
+
+| Custom accent colors | Custom accent colors |
+|:-----------------:|:-----------:|
+| ![Color1](img/6.png) | ![Color2](img/7.png) |
+
+# Project preparation
+
+Copy that repo using
+``` Bash
+git clone https://github.com/DanilVusenko86/Google-Play-Music-Unofficial-Player.git
+```
+
+Then install modules using *npm*
+
+# Debugging and Testing
+
+For Debugging use
+``` Bash
+npm start
+```
+For packaging use
+``` Bash
+npm run make
+```
