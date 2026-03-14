@@ -1,0 +1,107 @@
+/* ╔════════════════════════════════╗
+   ║ Pages Style                    ║
+   ╚════════════════════════════════╝
+*/
+
+/* ===================== */
+/*    Base Page Class    */
+/* ===================== */
+
+.page {
+    width: 100%;
+    height: 69%;
+    position: absolute;
+    padding: 17px;
+    top: 145px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: var(--GPMUP-second-grey);
+}
+
+/* ================= */
+/*    Page Banner    */
+/* ================= */
+
+.page .banner {
+    width: 102%;
+    height: 50px;
+    background-color: var(--GPMUP-base);
+    position: absolute;
+    left: -20px;
+    top: 0;
+}
+
+/* ==================== */
+/*    Playlists Page    */
+/* ==================== */
+
+.page__playlists {
+    visibility: hidden;
+}
+
+/* ================= */
+/*    Albums Page    */
+/* ================= */
+
+.page__albums {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(171px, 178px));
+    gap: 10px;
+    box-sizing: border-box;
+    min-height: calc(100vh - 215px);
+}
+
+/* ================ */
+/*    Songs Page    */
+/* ================ */
+
+.page__songs {
+    visibility: hidden;
+}
+
+/* ================== */
+/*    Artists Page    */
+/* ================== */
+
+.page__artists {
+    visibility: hidden;
+}
+
+/* ======================= */
+/*    Album Opened Page    */
+/* ======================= */
+
+.page__openedMedia {
+    top: 0;
+    height: 90%;
+}
+
+.page__openedMedia .banner {
+    width: 102%;
+    height: 99%;
+    position: absolute;
+    left: -20px;
+    top: 0;
+    background-image: url('../img/noalbum.png');
+}
+
+/* ================= */
+/*    Search Page    */
+/* ================= */
+
+.page__search {
+    visibility: hidden;
+}
+
+.page__search .search__title {
+    font-size: 25px;
+    padding-left: 15px;
+}
+
+.page__search .search__albums {
+    min-height: 230px;
+}
+
+.page__search .songs__card {
+    min-height: 90px;
+}

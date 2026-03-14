@@ -1,0 +1,81 @@
+/* ╔════════════════════════════════╗
+   ║ Base Style                     ║
+   ╚════════════════════════════════╝
+*/
+
+/* ============ */
+/*    Colors    */
+/* ============ */
+
+:root {
+    --GPMUP-base: #ef6c00;
+    --GPMUP-gray: #636363;
+    --GPMUP-darkgrey: #393939;
+    --GPMUP-text-grey: #595b5c;
+    --GPMUP-second-grey: #f5f5f5;
+}
+
+/* ================ */
+/*    Body Style    */
+/* ================ */
+
+body {
+    background-color: var(--GPMUP-second-grey);
+    user-select: none;
+}
+
+/* ================ */
+/*    Scroll Bar    */
+/* ================ */
+
+body::-webkit-scrollbar {
+    width: 0;
+}
+
+
+button {
+    -webkit-app-region: no-drag;
+}
+
+a,button:focus { outline: none; }
+
+a, .track, .album-item, li, input {
+    -webkit-app-region: no-drag;
+}
+
+li {
+    list-style: none;
+}
+
+/* ========================== */
+/*    Image Class for divs    */
+/* ========================== */
+
+.image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ================ */
+/*    ScrollBars    */
+/* ================ */
+
+div::-webkit-scrollbar {
+    width: 5px;
+    background-color: white;
+}
+
+div::-webkit-scrollbar-thumb {
+    background-color: var(--GPMUP-gray);
+}
+
+ul::-webkit-scrollbar {
+    width: 5px;
+    background-color: white;
+}
+
+ul::-webkit-scrollbar-thumb {
+    background-color: var(--GPMUP-gray);
+}
+

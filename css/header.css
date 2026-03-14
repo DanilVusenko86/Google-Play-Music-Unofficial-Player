@@ -1,0 +1,143 @@
+/* ╔════════════════════════════════╗
+   ║ Header Style                   ║
+   ╚════════════════════════════════╝
+*/
+
+/* ================================== */
+/*    Main Navigation Header Class    */
+/* ================================== */
+
+.navigation {
+    width: 100%;
+    height: 145px;
+    background-color: var(--GPMUP-base);
+    position: fixed;
+    z-index: 200;
+    -webkit-app-region: drag;
+}
+
+/* ===================== */
+/*    Navigation Head    */
+/* ===================== */
+
+.navigation .navigation__head {
+    width: 100%;
+    height: 48%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* =========================== */
+/*    Navigation Head Left    */
+/* =========================== */
+
+.navigation__head .head__left {
+    width: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 18px;
+}
+
+.head__left .library__name {
+    font-size: 17px;
+    margin-top: -5px;
+}
+
+.account {
+    width: 125.55px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.account .account__avatar {
+    width: 40px;
+    height: 40px;
+}
+
+/* ======================= */
+/*    Navigation Bottom    */
+/* ======================= */
+
+.navigation .navigation__bottom {
+    width: 100%;
+    height: 48%;
+    padding-top: 5px;
+    background-color: transparent;
+}
+
+/* ===================== */
+/*    Navigation Tabs    */
+/* ===================== */
+
+.navigation__tabs {
+    width: 279px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    margin-left: 70px;
+    margin-top: 2px;
+}
+
+.navigation__tabs .tab {
+    text-transform: uppercase;
+    color: #ffffffbe;
+    cursor: pointer;
+    height: 40px;
+}
+
+.navigation__tabs .tab:hover {
+    text-transform: uppercase;
+    color: #ffffff;
+    cursor: pointer;
+    height: 40px;
+}
+
+/* ================= */
+/*    Toggle Tabs    */
+/* ================= */
+
+.navigation__tabs .tab.active {
+    text-transform: uppercase;
+    color: #ffffff;
+    border-bottom: 2px solid white;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -3px;
+}
+
+
+/* ================ */
+/*    Search Bar    */
+/* ================ */
+
+.navigation__searchbar {
+    width: 500px;
+    height: 40px;
+    background-color: #ffffff24;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navigation__searchbar .searchbar__input{
+    width: 400px;
+    height: 20px;
+    border: none;
+    margin-bottom: 3px;
+    color: white;
+}
+
+.navigation__searchbar .searchbar__input::placeholder {
+    color: white;
+}

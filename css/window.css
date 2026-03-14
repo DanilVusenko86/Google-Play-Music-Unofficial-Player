@@ -1,0 +1,42 @@
+/* ╔════════════════════════════════╗
+   ║ Window Style                   ║
+   ╚════════════════════════════════╝
+*/
+
+/* ======================== */
+/*    Window Control Div    */
+/* ======================== */
+
+.window__controls {
+    width: 100%;
+    height: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* ============================ */
+/*    Window Control Buttons    */
+/* ============================ */
+
+.window__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.window__buttons .window__button {
+    width: 23px;
+    height: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#ffffffaf;
+    border: none;
+    background: none;
+    margin-right: 1px;
+}
+
+.window__buttons .window__button i {
+    font-size: 18px;
+}

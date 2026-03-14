@@ -1,0 +1,54 @@
+/* ╔════════════════════════════════╗
+   ║ SideNav Style                  ║
+   ╚════════════════════════════════╝
+*/
+
+/* ===================== */
+/*    GPMUP Logo Elem    */
+/* ===================== */
+
+.sidenav__logo {
+    width: 100%;
+    height: 85px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    justify-content: space-around;
+}
+
+.logo__main {
+    display: flex;
+    align-items: center;
+    padding-top: 25px;
+    margin-bottom: -20px;
+}
+
+/* ===================== */
+/*    GPMUP Logo Text    */
+/* ===================== */
+
+.logo__text {
+    margin: 0;
+    color: var(--GPMUP-text-grey);
+}
+
+/* ================================= */
+/*    GPMUP Change Logo Text Elem    */
+/* ================================= */
+
+.logo__main .change {
+    color: var(--GPMUP-base);
+}
+
+/* ===================== */
+/*    GPMUP list Elem    */
+/* ===================== */
+
+.sidenav__item {
+    display: flex;
+    align-items: center;
+}
+
+.sidenav__item.active, .sidenav__item.active > i {
+    color: var(--GPMUP-base) !important;
+}

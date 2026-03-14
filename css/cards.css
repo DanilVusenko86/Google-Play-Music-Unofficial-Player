@@ -1,0 +1,220 @@
+/* ╔════════════════════════════════╗
+   ║ Cards Content Style            ║
+   ╚════════════════════════════════╝
+*/
+
+/* ================ */
+/*    Songs Card    */
+/* ================ */
+
+.songs__card {
+    width: 90%;
+    min-height: 500px;
+    margin: 0 auto;
+}
+
+/* ======================= */
+/*    Songs Card Header    */
+/* ======================= */
+
+.songs__card .card__header {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px;
+    padding-top: 34px;
+    padding-bottom: 20px;
+}
+
+/* ============================== */
+/*    Songs Card Header Labels    */
+/* ============================== */
+
+.card__header .header__label {
+    color: var(--GPMUP-darkgray);
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 14px;
+    margin-left: 9px;
+}
+
+.card__header .header__label i {
+    color: var(--GPMUP-darkgray);
+    font-size: 19px;
+}
+
+/* =============== */
+/*    Song Item    */
+/* =============== */
+
+.card__list .list__item {
+    height: 69px;
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px;
+    padding-bottom: 0;
+    padding-top: 0;
+    grid-template-columns: 84px 208px 50px 293px 1fr 21px;
+}
+
+.list__item .item__thumbnail {
+    width: 50px;
+    height: 50px;
+    background-image: url('../img/noalbum.png');
+}
+
+.item__text  {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 188px;
+    font-size: 15px;
+    color: var(--GPMUP-gray);
+}
+
+/* ================ */
+/*    Album Card    */
+/* ================ */
+
+.page__openedMedia {
+    visibility: hidden;
+}
+
+.openedMedia__list {
+    width: 90%;
+    min-height: 500px;
+    margin: 0 auto;
+    margin-top: 184px;
+}
+
+/* ============================ */
+/*    Album Card Play Button    */
+/* ============================ */
+
+.openedMedia__list .card__play {
+    width: 55px;
+    height: 55px;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: right;
+    margin-top: -30px;
+    margin-right: 30px;
+    margin-bottom: -25px;
+    background: var(--GPMUP-base);
+    color: white;
+}
+
+.openedMedia__list .card__play i {
+    font-size: 33px;
+}
+
+/* ======================= */
+/*    Album Card Header    */
+/* ======================= */
+
+.openedMedia__list .list__header {
+    display: flex;
+    width: 100%;
+}
+
+/* ================================= */
+/*    Album Card Header Thumbnail    */
+/* ================================= */
+
+.openedMedia__list .list__header .album__thumbnail {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 0;
+    width: 210px;
+    height: 210px;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    padding: 4px;
+}
+
+/* ===================== */
+/*    Album Card Info    */
+/* ===================== */
+
+.openedMedia__list .list__header .album__info {
+    width: 79%;
+    padding: 20px;
+}
+
+.openedMedia__list .list__header .album__info .album__name {
+    margin: 0;
+    font-size: 38px;
+    overflow: hidden;
+    width: 93%;
+    height: 46px;
+    text-overflow: ellipsis;
+}
+
+.openedMedia__list .list__header .album__info .album__artist {
+    margin: 0;
+    margin-left: 2px;
+    margin-top: 4px;
+    color: #636262;
+}
+
+.openedMedia__list .list__header .album__info .album__metadata {
+    font-size: 11px;
+    margin-left: 2px;
+    margin-top: -1px;
+    color: #636262;
+}
+
+/* ============================ */
+/*    Album Card List Header    */
+/* ============================ */
+
+.openedMedia__list .card__header {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px;
+    padding-top: 34px;
+    padding-left: 60px;
+    padding-bottom: 20px;
+}
+
+/* ===================== */
+/*    Album Card List    */
+/* ===================== */
+
+.openedMedia__list .card__list {
+    margin: 0;
+}
+
+/* ========================== */
+/*    Album Card List Item    */
+/* ========================== */
+
+.openedMedia__list .list__item {
+    height: 69px;
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+    padding: 27px;
+    padding-bottom: 0;
+    padding-top: 0;
+    grid-template-columns: 31px 827px 76px 39px;
+}
+
+.openedMedia__list .list__item .item__text {
+    width: 95%;
+    margin-left: 6px;
+    font-size: 16px;
+    color: var(--GPMUP-darkgrey);
+}

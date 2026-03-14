@@ -1,0 +1,95 @@
+/* ╔════════════════════════════════╗
+   ║ Bars Animation Style           ║
+   ╚════════════════════════════════╝
+*/
+
+/* ================= */
+/*    Default Bar    */
+/* ================= */
+
+.bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 2px;
+    width: 19px;
+    height: 19px;
+    margin-right: 19px;
+}
+
+.page__songs .songs__card .card__list .list__item .bars {
+    margin-right: 0;
+    margin-left: 15px;
+}
+
+.playlist .card__list .list__item .bars {
+    margin-right: 0;
+    margin-left: 15px;
+}
+
+/* =================== */
+/*    Thumbnail Bar    */
+/* =================== */
+
+.thumbnail__bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 2px;
+    width: 10px;
+    height: 10px;
+}
+  
+/* =============== */
+/*    Black Bar    */
+/* =============== */
+
+.bar__black {
+    width: 6px;
+    height: 17px;
+    background-color: black;
+    animation: bounce__black 0.5s infinite ease-in-out;
+    animation-play-state: running; 
+}
+
+/* =============== */
+/*    White Bar    */
+/* =============== */
+
+.bar__white {
+    width: 3px;
+    height: 10px;
+    background-color: white;
+    animation: bounce__white 0.5s infinite ease-in-out;
+    animation-play-state: running; 
+}
+
+/* ================ */
+/*    Animations    */
+/* ================ */
+  
+.bar:nth-child(1) {
+    animation-delay: 0s;
+}
+.bar:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.bar:nth-child(3) {
+    animation-delay: 0.4s;
+}
+  
+@keyframes bounce__black {
+    0%, 100% {
+      height: 9px;
+    }
+    50% {
+      height: 17px;
+    }
+}
+
+@keyframes bounce__white {
+    0%, 100% {
+      height: 5px;
+    }
+    50% {
+      height: 10px;
+    }
+}

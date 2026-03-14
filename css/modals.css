@@ -1,0 +1,74 @@
+/* ╔════════════════════════════════╗
+   ║ Modals Style                   ║
+   ╚════════════════════════════════╝
+*/
+
+/* ==================== */
+/*    Settings Modal    */
+/* ==================== */
+
+/* Tabs Configuration */
+.modal__settings .modal-content .tabs {
+    background-color: transparent;
+}
+
+.modal__settings .modal-content .tabs .tab a {
+    color: var(--GPMUP-base) !important;
+}
+
+.modal__settings .modal-content .tabs .tab a:hover {
+    color: var(--GPMUP-base) !important;
+}
+
+.modal__settings .modal-content .tabs .indicator {
+    background-color: var(--GPMUP-base) !important;
+}
+
+.modal-footer .modal-close {
+    color: var(--GPMUP-base);
+}
+
+/* Settings Pages */
+.settings__page {
+    height: 300px;
+}
+
+.modal__settings .settings__page a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+/* Apparence Page */
+#apparence label {
+    display: flex;
+    align-items: center;
+}
+
+#apparence label .apparence__accent {
+    margin-right: 15px;
+    border: none;
+    background-color: transparent;
+}
+
+#apparence label .apparence__accent::-webkit-color-swatch {
+    border: none;
+}
+
+/* Folders Page */
+#folders .folders__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 4px;
+}
+
+#folders .folders__list .collection-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+}
